@@ -13,7 +13,6 @@
 		4B6A0B061979A0F5004A40EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A0B041979A0F5004A40EE /* InfoPlist.strings */; };
 		4B6A0B081979A0F5004A40EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A0B071979A0F5004A40EE /* main.m */; };
 		4B6A0B0C1979A0F5004A40EE /* BLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A0B0B1979A0F5004A40EE /* BLCAppDelegate.m */; };
-		4B6A0B0F1979A0F5004A40EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A0B0D1979A0F5004A40EE /* Main.storyboard */; };
 		4B6A0B121979A0F5004A40EE /* BLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A0B111979A0F5004A40EE /* BLCViewController.m */; };
 		4B6A0B141979A0F5004A40EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A0B131979A0F5004A40EE /* Images.xcassets */; };
 		4B6A0B1B1979A0F5004A40EE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6A0B1A1979A0F5004A40EE /* XCTest.framework */; };
@@ -21,6 +20,7 @@
 		4B6A0B1D1979A0F5004A40EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6A0AFF1979A0F5004A40EE /* UIKit.framework */; };
 		4B6A0B251979A0F5004A40EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B6A0B231979A0F5004A40EE /* InfoPlist.strings */; };
 		4B6A0B271979A0F5004A40EE /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A0B261979A0F5004A40EE /* AlcolatorTests.m */; };
+		4BCC4B911979BB56006BE6E6 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC4B901979BB56006BE6E6 /* BLCWhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		4B6A0B091979A0F5004A40EE /* Alcolator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alcolator-Prefix.pch"; sourceTree = "<group>"; };
 		4B6A0B0A1979A0F5004A40EE /* BLCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCAppDelegate.h; sourceTree = "<group>"; };
 		4B6A0B0B1979A0F5004A40EE /* BLCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCAppDelegate.m; sourceTree = "<group>"; };
-		4B6A0B0E1979A0F5004A40EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B6A0B101979A0F5004A40EE /* BLCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCViewController.h; sourceTree = "<group>"; };
 		4B6A0B111979A0F5004A40EE /* BLCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCViewController.m; sourceTree = "<group>"; };
 		4B6A0B131979A0F5004A40EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		4B6A0B221979A0F5004A40EE /* AlcolatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlcolatorTests-Info.plist"; sourceTree = "<group>"; };
 		4B6A0B241979A0F5004A40EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B6A0B261979A0F5004A40EE /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		4BCC4B8F1979BB56006BE6E6 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
+		4BCC4B901979BB56006BE6E6 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +115,12 @@
 			children = (
 				4B6A0B0A1979A0F5004A40EE /* BLCAppDelegate.h */,
 				4B6A0B0B1979A0F5004A40EE /* BLCAppDelegate.m */,
-				4B6A0B0D1979A0F5004A40EE /* Main.storyboard */,
 				4B6A0B101979A0F5004A40EE /* BLCViewController.h */,
 				4B6A0B111979A0F5004A40EE /* BLCViewController.m */,
 				4B6A0B131979A0F5004A40EE /* Images.xcassets */,
 				4B6A0B021979A0F5004A40EE /* Supporting Files */,
+				4BCC4B8F1979BB56006BE6E6 /* BLCWhiskeyViewController.h */,
+				4BCC4B901979BB56006BE6E6 /* BLCWhiskeyViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -231,7 +233,6 @@
 			files = (
 				4B6A0B141979A0F5004A40EE /* Images.xcassets in Resources */,
 				4B6A0B061979A0F5004A40EE /* InfoPlist.strings in Resources */,
-				4B6A0B0F1979A0F5004A40EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6A0B0C1979A0F5004A40EE /* BLCAppDelegate.m in Sources */,
+				4BCC4B911979BB56006BE6E6 /* BLCWhiskeyViewController.m in Sources */,
 				4B6A0B081979A0F5004A40EE /* main.m in Sources */,
 				4B6A0B121979A0F5004A40EE /* BLCViewController.m in Sources */,
 			);
@@ -281,14 +283,6 @@
 				4B6A0B051979A0F5004A40EE /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4B6A0B0D1979A0F5004A40EE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B6A0B0E1979A0F5004A40EE /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		4B6A0B231979A0F5004A40EE /* InfoPlist.strings */ = {
@@ -380,7 +374,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alcolator/Alcolator-Prefix.pch";
 				INFOPLIST_FILE = "Alcolator/Alcolator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,7 +389,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alcolator/Alcolator-Prefix.pch";
 				INFOPLIST_FILE = "Alcolator/Alcolator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +455,7 @@
 				4B6A0B2C1979A0F5004A40EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B6A0B2D1979A0F5004A40EE /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +464,7 @@
 				4B6A0B2F1979A0F5004A40EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
