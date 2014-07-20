@@ -170,6 +170,8 @@
     
     [self.view addSubview:self.resultLabel];
     [self.view addSubview:self.calculateButton];
+    
+    //[self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -203,7 +205,8 @@
     }
     NSString* viewTitle = [self getViewTitle];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", nil), viewTitle, beerText];
-    //self.beerLabel.text = beerText;
+
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 - (void)buttonPressed:(UIButton *)sender {

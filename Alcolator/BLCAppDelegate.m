@@ -7,7 +7,9 @@
 //
 
 #import "BLCAppDelegate.h"
-#import "BLCMainMenuViewController.h"
+//#import "BLCMainMenuViewController.h"
+#import "BLCWineViewController.h"
+#import "BLCWhiskeyViewController.h"
 
 @implementation BLCAppDelegate
 
@@ -16,11 +18,26 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    BLCMainMenuViewController *viewController = [[BLCMainMenuViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = navController;
+    BLCWineViewController *wineVC = [[BLCWineViewController alloc] init];
+    BLCWhiskeyViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    wineVC.title = @"Wine";
+    whiskeyVC.title = @"Whiskey";
+    [wineVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    [whiskeyVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    self.window.rootViewController = tabBarVC;
+    
+    tabBarVC.delegate = self;
+    
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"New view controller selected: %@", viewController.title);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
