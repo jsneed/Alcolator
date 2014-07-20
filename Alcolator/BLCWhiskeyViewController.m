@@ -14,6 +14,16 @@
 
 @implementation BLCWhiskeyViewController
 
+- (NSString*) getViewTitle
+{
+    return @"Whiskey";
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = @"Whiskey";
+}
+
 - (void)buttonPressed:(UIButton *)sender;
 {
     [self.beerPercentTextField resignFirstResponder];

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Bloc. All rights reserved.
 //
 
-#import "BLCViewController.h"
+#import "BLCWineViewController.h"
 
-@interface BLCWhiskeyViewController : BLCViewController
+@interface BLCWhiskeyViewController : BLCWineViewController
 
 @end

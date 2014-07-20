@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Bloc. All rights reserved.
 //
 
-#import "BLCViewController.h"
+#import "BLCWineViewController.h"
 
-@interface BLCViewController () <UITextFieldDelegate>
+@interface BLCWineViewController () <UITextFieldDelegate>
 
 //@property (weak, nonatomic) UILabel *beerLabel;
 
@@ -18,10 +18,14 @@
 
 @end
 
-@implementation BLCViewController
+@implementation BLCWineViewController
 
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
-    //return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown | UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
+- (NSString*) getViewTitle
+{
+    return @"Wine";
+}
+
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return UIInterfaceOrientationMaskAll;
 }
 
@@ -66,6 +70,9 @@
 {
     // Calls the superclass's implementation
     [super viewDidLoad];
+    //self.viewTitle = @"Wine";
+    //[self setViewTitle:@"Wine"];
+    self.navigationItem.title = @"Wine";
     
     // Set our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor whiteColor];
@@ -118,10 +125,12 @@
 
 -(void)updateInterface {
 
+    CGFloat top = 100; //self.view.bounds.size.height + 10;
     CGFloat padding;
     CGFloat itemHeight;
     CGFloat multiplier;
     
+    //self.view.frame.size.height
     //CGFloat viewWidth = self.view.bounds.size.width;
     CGFloat viewWidth;
     
@@ -134,7 +143,6 @@
         itemHeight = 44;
         multiplier = 4;
         viewWidth = screenWidth;
-        //self.view.backgroundColor = [UIColor lightGrayColor];
         NSLog(@"portrait");
     }
     else {
@@ -142,13 +150,12 @@
         itemHeight = 20;
         multiplier = 1;
         viewWidth = screenHeight;
-        //self.view.backgroundColor = [UIColor whiteColor];
         NSLog(@"landscape");
     }
     
     CGFloat itemWidth = viewWidth - padding - padding;
 
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding, top, itemWidth, itemHeight);
     [self.view addSubview:self.beerPercentTextField];
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
@@ -186,7 +193,7 @@
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     
-    /*int numberOfBeers = self.beerCountSlider.value;
+    int numberOfBeers = self.beerCountSlider.value;
     NSString *beerText;
     
     if (numberOfBeers == 1) {
@@ -194,7 +201,9 @@
     } else {
         beerText = [NSString stringWithFormat:NSLocalizedString(@"%d beers", nil), numberOfBeers];
     }
-    self.beerLabel.text = beerText;*/
+    NSString* viewTitle = [self getViewTitle];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", nil), viewTitle, beerText];
+    //self.beerLabel.text = beerText;
 }
 
 - (void)buttonPressed:(UIButton *)sender {
